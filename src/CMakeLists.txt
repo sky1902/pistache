@@ -51,8 +51,9 @@ endif ()
 set(Pistache_OUTPUT_NAME "pistache")
 if (BUILD_SHARED_LIBS)
     set_target_properties(pistache_shared PROPERTIES
-        OUTPUT_NAME ${Pistache_OUTPUT_NAME}-${version}
-        SOVERSION ${SONAME_VERSION_MAJOR}.${SONAME_VERSION_MINOR}
+        OUTPUT_NAME ${Pistache_OUTPUT_NAME}
+	VERSION ${SONAME_VERSION_MAJOR}.${SONAME_VERSION_MINOR}.${SONAME_VERSION_PATCH}
+        SOVERSION ${SONAME_VERSION_MAJOR}
     )
 endif ()
 
